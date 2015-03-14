@@ -40,10 +40,10 @@
   
 <div class="container">  <!--The container class corrects alignment and will effect the code for whatever page-->
   <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class:"alert alert-#{key}"%> <!--This is the error message-->
-  <%end%>
-
-  <%=yield%>
+    <%= content_tag :div, value, class: "alert alert-#{key}" %> <!--This is the error message-->
+  <% end %>
+  
+  <%= yield %>
 </div>  
 </body>
 </html>
