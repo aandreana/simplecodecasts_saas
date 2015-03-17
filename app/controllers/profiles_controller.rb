@@ -16,6 +16,12 @@ class ProfilesController < ApplicationController
     end   
   end
   
+  def edit
+   @user = User.find( params[:user_id] )
+   @profile = @user.profile
+  end
+  
+  
   private
   # This is the whitelisting for this form
   def profile_params
